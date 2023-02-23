@@ -80,7 +80,8 @@ app.get('/checkPIN/:code', (req, res) => {
 
 app.use(require("./routes/products.routes"));
 
-const port = 3001
+const port = process.env.PORT || 3001;
+
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
 })
